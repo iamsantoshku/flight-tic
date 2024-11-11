@@ -8,7 +8,7 @@ import jwt from "jsonwebtoken";
 const saltRounds = 10;
 
 const createJWTToken = (payload) => {
-  return jwt.sign(payload, process.env., { expiresIn: "25d" });
+  return jwt.sign(payload, process.env.JWT_TOKEN, { expiresIn: "25d" });
 };
 
 export const registerUser = async (req, res) => {
