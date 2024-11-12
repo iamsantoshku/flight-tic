@@ -182,15 +182,491 @@
 
 
 
+// import React, { useRef } from "react";
+// import HotelCards from "../Card/HotelCards";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules"; // Import Autoplay module
+
+// import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+
+// import "swiper/css";
+// import "swiper/css/navigation"; // Import Swiper navigation styles
+
+// import { flightLocationData } from "../../assets/data/FlightData";
+
+// const TopPlaces = () => {
+//   const swiperRef = useRef(null);
+
+//   const goNext = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slideNext();
+//     }
+//   };
+
+//   const goPrev = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slidePrev();
+//     }
+//   };
+
+//   return (
+//     <div className="mt-[9vw] max-w-[1400px] mx-auto relative">
+//       <div className="mb-5">
+//         <h1 className="text-[35px] md:text-[50px] font-bold">
+//           {/* Choose your tour! */}
+//         </h1>
+//       </div>
+
+//       <Swiper
+//         ref={swiperRef}
+//         modules={[Navigation, Autoplay]} // Include Autoplay module
+//         navigation={{
+//           nextEl: ".swiper-button-next",
+//           prevEl: ".swiper-button-prev",
+//         }}
+//         slidesPerView={1}
+//         spaceBetween={10}
+//         autoplay={{
+//           delay: 3000, // 3 seconds delay between slides
+//           disableOnInteraction: false, // Autoplay continues after interaction
+//         }}
+//         breakpoints={{
+//           640: {
+//             slidesPerView: 2,
+//             spaceBetween: 20,
+//           },
+//           768: {
+//             slidesPerView: 3,
+//             spaceBetween: 60,
+//           },
+//         }}
+//       >
+//         {flightLocationData.map((data, index) => (
+//           <SwiperSlide
+//             className="w-full flex justify-center items-center"
+//             key={index}
+//           >
+//             <HotelCards data={data} />
+//           </SwiperSlide>
+//         ))}
+
+//         {/* Navigation Arrows */}
+//         <div className="absolute inset-0 flex justify-between items-center z-2">
+//           {/* Left Arrow */}
+//           <div
+//             className="w-[35px] h-[35px] flex justify-center items-center rounded-full hover:bg-black hover:text-white cursor-pointer transition duration-200 swiper-button-prev left-1"
+//             onClick={goPrev}
+//           >
+//             <HiOutlineArrowSmLeft size={25} />
+//           </div>
+
+//           {/* Right Arrow */}
+//           <div
+//             className="w-[35px] h-[35px] flex justify-center items-center rounded-full hover:bg-black hover:text-white cursor-pointer transition duration-200 swiper-button-next right-1"
+//             onClick={goNext}
+//           >
+//             <HiOutlineArrowSmRight size={25} />
+//           </div>
+//         </div>
+//       </Swiper>
+//     </div>
+//   );
+// };
+
+// export default TopPlaces;
+
+
+
+// import React, { useRef } from "react";
+// import HotelCards from "../Card/HotelCards";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules"; // Import Autoplay module
+
+// import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+
+// import "swiper/css";
+// import "swiper/css/navigation"; // Import Swiper navigation styles
+
+// import { flightLocationData } from "../../assets/data/FlightData";
+
+// const TopPlaces = () => {
+//   const swiperRef = useRef(null);
+
+//   const goNext = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slideNext();
+//     }
+//   };
+
+//   const goPrev = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slidePrev();
+//     }
+//   };
+
+//   return (
+//     <div className="mt-[9vw] max-w-[1400px] mx-auto relative">
+//       <div className="mb-5">
+//         <h1 className="text-[35px] md:text-[50px] font-bold">
+//           {/* Choose your tour! */}
+//         </h1>
+//       </div>
+
+//       <Swiper
+//         ref={swiperRef}
+//         modules={[Navigation, Autoplay]} // Include Autoplay module
+//         navigation={{
+//           nextEl: ".swiper-button-next",
+//           prevEl: ".swiper-button-prev",
+//         }}
+//         slidesPerView={1}
+//         spaceBetween={5} // Reduce space between slides
+//         autoplay={{
+//           delay: 3000, // 3 seconds delay between slides
+//           disableOnInteraction: false, // Autoplay continues after interaction
+//         }}
+//         breakpoints={{
+//           640: {
+//             slidesPerView: 2,
+//             spaceBetween: 10, // Reduced space on smaller screens
+//           },
+//           768: {
+//             slidesPerView: 3,
+//             spaceBetween: 20, // Reduced space on larger screens
+//           },
+//         }}
+//       >
+//         {flightLocationData.map((data, index) => (
+//           <SwiperSlide
+//             className="w-full flex justify-center items-center"
+//             key={index}
+//           >
+//             <HotelCards data={data} />
+//           </SwiperSlide>
+//         ))}
+
+//         {/* Navigation Arrows */}
+//         <div className="absolute inset-0 flex justify-between items-center z-2">
+//           {/* Left Arrow */}
+//           <div
+//             className="w-[35px] h-[35px] flex justify-center items-center rounded-full hover:bg-black hover:text-white cursor-pointer transition duration-200 swiper-button-prev left-1"
+//             onClick={goPrev}
+//           >
+//             <HiOutlineArrowSmLeft size={25} />
+//           </div>
+
+//           {/* Right Arrow */}
+//           <div
+//             className="w-[35px] h-[35px] flex justify-center items-center rounded-full hover:bg-black hover:text-white cursor-pointer transition duration-200 swiper-button-next right-1"
+//             onClick={goNext}
+//           >
+//             <HiOutlineArrowSmRight size={25} />
+//           </div>
+//         </div>
+//       </Swiper>
+//     </div>
+//   );
+// };
+
+// export default TopPlaces;
+
+
+
+
+// import React, { useRef } from "react";
+// import HotelCards from "../Card/HotelCards";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules"; // Import Autoplay module
+
+// import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+
+// import "swiper/css";
+// import "swiper/css/navigation"; // Import Swiper navigation styles
+
+// import { flightLocationData } from "../../assets/data/FlightData";
+
+// const TopPlaces = () => {
+//   const swiperRef = useRef(null);
+
+//   const goNext = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slideNext();
+//     }
+//   };
+
+//   const goPrev = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slidePrev();
+//     }
+//   };
+
+//   return (
+//     <div className="mt-[9vw] max-w-[1400px] mx-auto relative">
+//       <div className="mb-5">
+//         <h1 className="text-[35px] md:text-[50px] font-bold">
+//           {/* Choose your tour! */}
+//         </h1>
+//       </div>
+
+//       <Swiper
+//         ref={swiperRef}
+//         modules={[Navigation, Autoplay]} // Include Autoplay module
+//         navigation={{
+//           nextEl: ".swiper-button-next",
+//           prevEl: ".swiper-button-prev",
+//         }}
+//         slidesPerView={1}
+//         spaceBetween={5} // Reduce space between slides
+//         autoplay={{
+//           delay: 3000, // 3 seconds delay between slides
+//           disableOnInteraction: false, // Autoplay continues after interaction
+//         }}
+//         breakpoints={{
+//           640: {
+//             slidesPerView: 2,
+//             spaceBetween: 10, // Reduced space on smaller screens
+//           },
+//           768: {
+//             slidesPerView: 3,
+//             spaceBetween: 20, // Reduced space on larger screens
+//           },
+//         }}
+//       >
+//         {flightLocationData.map((data, index) => (
+//           <SwiperSlide
+//             className="w-full flex justify-center items-center"
+//             key={index}
+//           >
+//             <HotelCards data={data} />
+//           </SwiperSlide>
+//         ))}
+
+//         {/* Navigation Arrows */}
+//         <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-5 z-10">
+//           {/* Left Arrow */}
+//           <div
+//             className="w-[35px] h-[35px] flex justify-center items-center rounded-full text-gray-400 hover:text-black cursor-pointer transition duration-200"
+//             onClick={goPrev}
+//           >
+//             <HiOutlineArrowSmLeft size={25} />
+//           </div>
+
+//           {/* Right Arrow */}
+//           <div
+//             className="w-[35px] h-[35px] flex justify-center items-center rounded-full text-gray-400 hover:text-black cursor-pointer transition duration-200 "
+//             onClick={goNext}
+//           >
+//             <HiOutlineArrowSmRight size={25} />
+//           </div>
+//         </div>
+//       </Swiper>
+//     </div>
+//   );
+// };
+
+// export default TopPlaces;
+
+
+
+// import React, { useRef } from "react";
+// import HotelCards from "../Card/HotelCards";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules"; // Import Autoplay module
+
+// import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+
+// import "swiper/css";
+// import "swiper/css/navigation"; // Import Swiper navigation styles
+
+// import { flightLocationData } from "../../assets/data/FlightData";
+
+// const TopPlaces = () => {
+//   const swiperRef = useRef(null);
+
+//   const goNext = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slideNext();
+//     }
+//   };
+
+//   const goPrev = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slidePrev();
+//     }
+//   };
+
+//   return (
+//     <div className="mt-[9vw] max-w-[1400px] mx-auto relative">
+//       <div className="mb-5">
+//         <h1 className="text-[35px] md:text-[50px] font-bold">
+//           {/* Choose your tour! */}
+//         </h1>
+//       </div>
+
+//       <Swiper
+//         ref={swiperRef}
+//         modules={[Navigation, Autoplay]} // Include Autoplay module
+//         navigation={{
+//           nextEl: ".swiper-button-next",
+//           prevEl: ".swiper-button-prev",
+//         }}
+//         slidesPerView={1}
+//         spaceBetween={5} // Reduce space between slides
+//         autoplay={{
+//           delay: 3000, // 3 seconds delay between slides
+//           disableOnInteraction: false, // Autoplay continues after interaction
+//         }}
+//         breakpoints={{
+//           640: {
+//             slidesPerView: 2,
+//             spaceBetween: 10, // Reduced space on smaller screens
+//           },
+//           768: {
+//             slidesPerView: 3,
+//             spaceBetween: 20, // Reduced space on larger screens
+//           },
+//         }}
+//       >
+//         {flightLocationData.map((data, index) => (
+//           <SwiperSlide
+//             className="w-full flex justify-center items-center"
+//             key={index}
+//           >
+//             <HotelCards data={data} />
+//           </SwiperSlide>
+//         ))}
+
+//         {/* Navigation Arrows */}
+//         <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-5 z-10">
+//           {/* Left Arrow */}
+//           <div
+//             className="mr-[2vw] w-[40px] h-[40px] flex justify-center items-center rounded-full bg-gray-200 text-gray-400 hover:text-black cursor-pointer transition duration-200"
+//             onClick={goPrev}
+//           >
+//             <HiOutlineArrowSmLeft size={25} />
+//           </div>
+
+//           {/* Right Arrow */}
+//           <div
+//             className="ml-[2vw] w-[40px] h-[40px] flex justify-center items-center rounded-full bg-gray-200 text-gray-400 hover:text-black cursor-pointer transition duration-200"
+//             onClick={goNext}
+//           >
+//             <HiOutlineArrowSmRight size={25} />
+//           </div>
+//         </div>
+//       </Swiper>
+//     </div>
+//   );
+// };
+
+// export default TopPlaces;
+
+
+
+// import React, { useRef } from "react";
+// import HotelCards from "../Card/HotelCards";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Autoplay } from "swiper/modules"; // Import Autoplay module
+
+// import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
+
+// import "swiper/css";
+// import "swiper/css/navigation"; // Import Swiper navigation styles
+
+// import { flightLocationData } from "../../assets/data/FlightData";
+
+// const TopPlaces = () => {
+//   const swiperRef = useRef(null);
+
+//   const goNext = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slideNext();
+//     }
+//   };
+
+//   const goPrev = () => {
+//     if (swiperRef.current && swiperRef.current.swiper) {
+//       swiperRef.current.swiper.slidePrev();
+//     }
+//   };
+
+//   return (
+//     <div className="mt-[9vw] max-w-[1500px] mx-auto relative">
+//       <div className="mb-5">
+//         <h1 className="text-[35px] md:text-[50px] font-bold">
+//           {/* Choose your tour! */}
+//         </h1>
+//       </div>
+
+//       <Swiper
+//         ref={swiperRef}
+//         modules={[Navigation, Autoplay]} // Include Autoplay module
+//         navigation={{
+//           nextEl: ".swiper-button-next",
+//           prevEl: ".swiper-button-prev",
+//         }}
+//         slidesPerView={1}
+//         spaceBetween={2} // Further reduced space between slides
+//         autoplay={{
+//           delay: 3000, // 3 seconds delay between slides
+//           disableOnInteraction: false, // Autoplay continues after interaction
+//         }}
+//         breakpoints={{
+//           640: {
+//             slidesPerView: 2,
+//             spaceBetween: 5, // Reduced space on smaller screens
+//           },
+//           768: {
+//             slidesPerView: 3,
+//             spaceBetween: 10, // Reduced space on larger screens
+//           },
+//         }}
+//       >
+//         {flightLocationData.map((data, index) => (
+//           <SwiperSlide
+//             className="w-full flex justify-center items-center"
+//             key={index}
+//           >
+//             <HotelCards data={data} />
+//           </SwiperSlide>
+//         ))}
+
+//         {/* Navigation Arrows */}
+//         <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-5 z-10">
+//           {/* Left Arrow */}
+//           <div
+//             className="mr-[2vw] w-[40px] h-[40px] flex justify-center items-center rounded-full bg-gray-200 text-gray-400 hover:text-black cursor-pointer transition duration-200"
+//             onClick={goPrev}
+//           >
+//             <HiOutlineArrowSmLeft size={25} />
+//           </div>
+
+//           {/* Right Arrow */}
+//           <div
+//             className="ml-[2vw] w-[40px] h-[40px] flex justify-center items-center rounded-full bg-gray-200 text-gray-400 hover:text-black cursor-pointer transition duration-200"
+//             onClick={goNext}
+//           >
+//             <HiOutlineArrowSmRight size={25} />
+//           </div>
+//         </div>
+//       </Swiper>
+//     </div>
+//   );
+// };
+
+// export default TopPlaces;
+
+
+
 import React, { useRef } from "react";
 import HotelCards from "../Card/HotelCards";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules"; // Import Autoplay module
+import { Navigation, Autoplay } from "swiper/modules";
 
 import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 
 import "swiper/css";
-import "swiper/css/navigation"; // Import Swiper navigation styles
+import "swiper/css/navigation";
 
 import { flightLocationData } from "../../assets/data/FlightData";
 
@@ -210,7 +686,7 @@ const TopPlaces = () => {
   };
 
   return (
-    <div className="mt-[9vw] max-w-[1400px] mx-auto relative">
+    <div className="mt-[7vw] max-w-[1400px] mx-auto relative">
       <div className="mb-5">
         <h1 className="text-[35px] md:text-[50px] font-bold">
           {/* Choose your tour! */}
@@ -219,25 +695,25 @@ const TopPlaces = () => {
 
       <Swiper
         ref={swiperRef}
-        modules={[Navigation, Autoplay]} // Include Autoplay module
+        modules={[Navigation, Autoplay]}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
         slidesPerView={1}
-        spaceBetween={10}
+        spaceBetween={0} // Reduce space to zero to minimize gaps
         autoplay={{
-          delay: 3000, // 3 seconds delay between slides
-          disableOnInteraction: false, // Autoplay continues after interaction
+          delay: 3000,
+          disableOnInteraction: false,
         }}
         breakpoints={{
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 3,
+            spaceBetween: 2, // Minimal space on smaller screens
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 60,
+            spaceBetween: 5, // Minimal space on larger screens
           },
         }}
       >
@@ -251,10 +727,10 @@ const TopPlaces = () => {
         ))}
 
         {/* Navigation Arrows */}
-        <div className="absolute inset-0 flex justify-between items-center z-2">
+        <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-5 z-10">
           {/* Left Arrow */}
           <div
-            className="w-[35px] h-[35px] flex justify-center items-center rounded-full hover:bg-black hover:text-white cursor-pointer transition duration-200 swiper-button-prev left-1"
+            className="mr-[2vw] w-[40px] h-[40px] flex justify-center items-center rounded-full bg-gray-200 text-gray-400 hover:text-black cursor-pointer transition duration-200"
             onClick={goPrev}
           >
             <HiOutlineArrowSmLeft size={25} />
@@ -262,7 +738,7 @@ const TopPlaces = () => {
 
           {/* Right Arrow */}
           <div
-            className="w-[35px] h-[35px] flex justify-center items-center rounded-full hover:bg-black hover:text-white cursor-pointer transition duration-200 swiper-button-next right-1"
+            className="ml-[2vw] w-[40px] h-[40px] flex justify-center items-center rounded-full bg-gray-200 text-gray-400 hover:text-black cursor-pointer transition duration-200"
             onClick={goNext}
           >
             <HiOutlineArrowSmRight size={25} />
@@ -274,4 +750,3 @@ const TopPlaces = () => {
 };
 
 export default TopPlaces;
-

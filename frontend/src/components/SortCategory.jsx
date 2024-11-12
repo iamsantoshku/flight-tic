@@ -7,8 +7,8 @@ import { BACKENDURL } from '../Config/Config';
 import FlightList from './flight/FlightList';
 
 const SortCategory = () => {
-//   const [data, setData] = useState([]);
-//   const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 

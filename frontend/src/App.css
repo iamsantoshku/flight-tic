@@ -31,6 +31,10 @@
   flex-direction: column;
   align-items: center;
 }
+.back{
+  margin-right: 10px;
+  width: 100vw;
+}
 
 .divider {
   border-right: 1px solid #e2e8f0;
