@@ -1,34 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/userSchema.js";
 
-// export const authenticate = async (req, res, next) => {
-//   const authToken = req.headers.authorization;
-//   console.log(authToken, "auth", "success")
 
-//   if (!authToken || !authToken.startsWith("Bearer ")) {
-//     return res.status(401).json({ success: false, message: "token not found" });
-//   }
-//   console.log(authToken, "auth", "success")
-
-//   try {
-//     const token = authToken.split(" ")[1];
-
-//     const decoded = jwt.verify(token, process.env.JWT_TOKEN);
-//     req.userId = decoded.userId;
-
-//     next();
-//   } catch (error) {
-//     if (error.name === "TokenExpiredError") {
-//       return res
-//         .status(401)
-//         .json({ success: false, message: "Session Expired" });
-//     }
-//     return res.status(401).json({ success: false, message: "Unauthorized" });
-//   }
-// };
-
-// import jwt from "jsonwebtoken";
-// import User from "../models/userSchema.js";
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -43,7 +16,8 @@ export const authenticate = async (req, res, next) => {
 
   try {
     const token = authToken.split(" ")[1];
-    const decoded = jwt.verify(token, process.env.JWT_TOKEN);
+    const decoded = jwt.verify(token, process.env.jhh);
+   
 
     req.userId = decoded.userId;
     console.log("Decoded user ID:", req.userId);
@@ -82,26 +56,3 @@ export const restrict = (roles) => async (req, res, next) => {
 
 
 
-// export const authenticate = async (req, res, next) => {
-//   const authToken = req.headers.authorization;
-//   console.log(authToken, "auth", "success");
-
-//   if (!authToken || !authToken.startsWith("Bearer ")) {
-//     return res.status(401).json({ success: false, message: "Unauthorized" });
-//   }
-
-//   try {
-//     const token = authToken.split(" ")[1];
-//     const decoded = jwt.verify(token, process.env.JWT_TOKEN);
-//     console.log("Decoded Token: ", decoded); // Log decoded token
-
-//     req.userId = decoded.userId;
-//     next();
-//   } catch (error) {
-//     console.error("Token verification error:", error); // Log error
-//     if (error.name === "TokenExpiredError") {
-//       return res.status(401).json({ success: false, message: "Session Expired" });
-//     }
-//     return res.status(401).json({ success: false, message: "Unauthorized" });
-//   }
-// };
