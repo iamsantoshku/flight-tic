@@ -56,3 +56,35 @@
   background-color: #0056b3;
 }
 
+/* .seatContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.seatsHover {
+  background-color: #e2e8f0;
+}
+
+.seatsHover:hover {
+  background-color: #cbd5e0;
+}
+
+.selectedSeats {
+  background-color: #90cdf4;
+  color: #fff;
+}
+
+.bookedSeats {
+  background-color: #a0aec0;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+ */
