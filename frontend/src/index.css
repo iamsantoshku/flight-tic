@@ -20,3 +20,10 @@
     @apply md:hover:bg-blue-400 md:hover:text-white;
   }
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+

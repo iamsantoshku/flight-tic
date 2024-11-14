@@ -4,7 +4,14 @@
   font-family: "Outfit", sans-serif;
 }
 
-.flight-card {
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* .flight-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,7 +61,7 @@
 
 .book-button:hover {
   background-color: #0056b3;
-}
+} */
 
 /* .seatContainer {
   display: flex;

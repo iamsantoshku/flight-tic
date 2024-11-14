@@ -21,7 +21,11 @@ const Home = () => {
       {/* <HeroSection /> */}
       <Hero/>
       {/* <ValuesWeProvide /> */}
-      <Planesliding/>
+      <div className=" mt-[237px] ">
+      <Planesliding />
+
+      </div>
+      
       <TopPlaces />
 
       <FlightList/>

@@ -383,7 +383,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="relative bg-cover bg-center px-0 h-[125vh] sm:h-[107vh] -ml-12 w-[100vw]  "
+      className="relative bg-cover bg-center px-0 h-[125vh] sm:h-[107vh] -ml-12 w-[105vw] sm:w-[105vw]"
       style={{ backgroundImage: `url(${img1})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-80"></div>
@@ -432,3 +432,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
