@@ -31,7 +31,7 @@ const SearchComponent = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center rounded-lg p-10 bg-gray-50 w-[90vw] max-w-8xl ml-[6vw] -mt-20  ">
+    <div className="flex flex-col items-center justify-center rounded-lg p-10 bg-gray-50 w-[90vw] max-w-8xl ml-[4.5vw] -mt-20  ">
       {/* Trip Type Selection */}
 
       <div className="flex mb-4 space-x-4 relative lg:-ml-[70vw] z-10 ml-0 sm:ml-[-10vw] md:ml-[-15vw] ">
