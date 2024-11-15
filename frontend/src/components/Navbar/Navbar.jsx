@@ -1010,7 +1010,7 @@ function Navbar() {
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="p-2">
-            <RxHamburgerMenu className="text-white" />
+            <RxHamburgerMenu className="text-black bg-white text-xl" />
           </button>
         </div>
       </nav>
