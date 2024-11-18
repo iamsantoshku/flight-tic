@@ -71,7 +71,8 @@ const TicketSearchPage = () => {
 
   return (
     <>
-    <div className="px-[30px] md:px-[30px] max-w-[1700px] mx-auto ml-[3vw] ">
+    {/* px-[30px] md:px-[30px] */}
+    <div className="max-w-[1700px] mx-auto  ">
       <BookTicketBox
         formData={formData}
         handleFormDataChange={handleFormDataChange}
@@ -94,13 +95,18 @@ const TicketSearchPage = () => {
         </div>
       ) : null}
     </div>
-    <div className="relative -top-64">
+    {/* <div className="relative -top-60">
   <Planesliding />
-  </div>
-  <div className="-mt-[12vw]">
+  </div> */}
+{/* relative -mt-16 sm:-mt-20 md:-mt-40 lg:-mt-90 */}
+<div className="-mt-[60vh] sm:-mt-60 md:-mt-40 lg:-mt-65">
+  <Planesliding />
+</div>
+
+  <div className="mt-10">
         <hr />
   </div>
-  <div className="relative ml-[5vw] mt-10">
+  <div className="relative ml-[5vw] ">
    <SortCategory/>
 
   </div>
@@ -117,3 +123,7 @@ const TicketSearchPage = () => {
 };
 
 export default TicketSearchPage;
+
+
+
+

@@ -834,17 +834,17 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Home
-                <FaAngleDown className="ml-1" />
+                {/* <FaAngleDown className="ml-1" /> */}
               </NavLink>
               {/* Dropdown */}
-              <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-64">
+              {/* <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-64">
                 <div className="p-4 hover:text-orange-400">
                   <h5 className="text-lg font-bold">Your Ultimate Travel Companion</h5>
                   <NavLink className="mt-4 btn btn-brand-secondary" to="/explore">
                     Explore Now
                   </NavLink>
                 </div>
-              </div>
+              </div> */}
             </li>
             {/* Other Nav Links */}
             <li className="relative group">
