@@ -392,8 +392,8 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center sm:items-start">
         {/* Text Section */}
         <div className="text-white text-center sm:text-left" style={{ fontFamily: 'Poppins, sans-serif' }}>
-          <h2 className="text-xl sm:text-2xl font-medium flex items-center justify-center sm:justify-start mb-6 sm:mb-10">
-            <span className="mr-2">🌍</span> The Best Booking System
+          <h2 className="text-xl -ml-14 sm:-ml-0 sm:text-2xl font-medium flex items-center justify-center sm:justify-start mb-6 sm:mb-10">
+            <span className="mr-2 sm:mr-0">🌍</span> The Best Booking System
           </h2>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6 sm:mb-10">
             Find The Best Flight <br /> For Amazing Places

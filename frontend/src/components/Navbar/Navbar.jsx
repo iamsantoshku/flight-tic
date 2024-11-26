@@ -903,10 +903,15 @@ function Navbar() {
               </NavLink>
             </li>
 
-
-
-
-
+            <li>
+              <NavLink
+                className={`${isHomePage ? (isScrolled ? 'text-black' : 'text-white') : 'text-black'} hover:text-orange-500`}
+                to="/about"
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </NavLink>
+            </li>
 
 
           </ul>

@@ -7,8 +7,10 @@ import { authContext } from "../context/authContext";
 import google from "../assets/img/blog/google.svg"
 import facebook from "../assets/img/blog/facebook.svg"
 import img1 from "../assets/logo7.png";
+import { useAuth0 } from '@auth0/auth0-react';
 
 const Login = () => {
+  const { loginWithRedirect } = useAuth0();
   const navigate = useNavigate();
   const { dispatch } = useContext(authContext);
   const [formData, setFormData] = useState({
@@ -111,7 +113,7 @@ const Login = () => {
             {/* <h2 className="text-2xl font-bold mb-4 ml-[2vw]">Sign In</h2>
             <h1 className="mb-4 text-lg ml-[2vw]">Hello There!</h1> */}
             <div className="flex gap-2 mb-6">
-              <button className="flex items-center gap-2 bg-white border border-gray-300 p-2 rounded-md hover:bg-black hover:text-white transition-colors ml-[2vw]">
+              <button onClick={() => loginWithRedirect()} className="flex items-center gap-2 bg-white border border-gray-300 p-2 rounded-md hover:bg-black hover:text-white transition-colors ml-[2vw]">
                 <img src={google} alt="Google" className="w-6 h-6" />
                 <span className="flex-1 text-left">Sign in with Google</span>
               </button>

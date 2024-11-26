@@ -6,8 +6,10 @@ import "react-toastify/dist/ReactToastify.css";
 import google from "../assets/img/blog/google.svg"
 import facebook from "../assets/img/blog/facebook.svg"
 import img1 from "../assets/logo7.png";
+import { useAuth0 } from '@auth0/auth0-react';
 
 const SignUp = () => {
+  const { loginWithRedirect } = useAuth0();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
@@ -119,7 +121,7 @@ const SignUp = () => {
 
               {/* <h1 className="mb-4 text-lg ml-[2vw]">Hello There!</h1> */}
               <div className="flex gap-2 mb-6">
-                <button className="flex items-center gap-2 bg-white border border-gray-300 p-2 rounded-md hover:bg-black hover:text-white transition-colors">
+                <button onClick={() => loginWithRedirect()} className="flex items-center gap-2 bg-white border border-gray-300 p-2 rounded-md hover:bg-black hover:text-white transition-colors">
                   <img src={google} alt="Google" className="w-9 h-7" />
                   <span className="flex-1 text-left">Signup in with Google</span>
                 </button>

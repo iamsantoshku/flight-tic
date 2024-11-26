@@ -588,10 +588,10 @@ const FlightList = () => {
     if (loading) return <p>Loading flights...</p>;
 
     return (
-        <div className="ml-10 mr-5 p-4">
+        <div className="p-4">
             <div className="flex justify-between items-center mb-4">
-                <div className="text-gray-800 ml-4">Total Flights Found: {flights.length}</div>
-                <div className="flex items-center gap-2 mr-[4vw]">
+                <div className="text-gray-800 ml-[8vw]">Total Flights Found: {flights.length}</div>
+                <div className="flex items-center gap-2 mr-[8vw]">
                     <FaArrowUp onClick={scrollToTop} className="text-gray-800 cursor-pointer" title="Back to Top" />
                     <select onChange={handleLimitChange} value={limit} className="bg-white border text-gray-800 py-1 px-3 rounded-md">
                         <option value={10}>10</option>
@@ -616,13 +616,137 @@ const FlightList = () => {
                     displayedFlights.map((flight) => <FlightCard key={flight._id} flight={flight} />)
                 )}
             </div>
-            <div className="flex justify-between mt-4">
+            <div className="flex lg:gap-[25vw] sm:gap-[5vw] ml-[6vw] mt-4 px-7">
                 <button onClick={goToPreviousPage} disabled={currentPage === 1} className="bg-gray-200 py-1 px-4 rounded-md">Previous</button>
                 <span>Page {currentPage} of {Math.ceil(flights.length / limit)}</span>
                 <button onClick={goToNextPage} disabled={currentPage === Math.ceil(flights.length / limit)} className="bg-gray-200 py-1 px-4 rounded-md">Next</button>
             </div>
+
+
+
         </div>
     );
 };
 
 export default FlightList;
+
+
+
+// import React, { useEffect, useState } from "react";
+// import FlightCard from "./FlightCard";
+// import { BACKENDURL } from "../../Config/Config";
+// import { FaArrowUp } from "react-icons/fa";
+
+// const FlightList = () => {
+//     const [flights, setFlights] = useState([]);
+//     const [loading, setLoading] = useState(true);
+//     const [limit, setLimit] = useState(10);
+//     const [sortBy, setSortBy] = useState("mostViewed");
+//     const [currentPage, setCurrentPage] = useState(1);
+
+//     useEffect(() => {
+//         const fetchFlights = async () => {
+//             try {
+//                 const response = await fetch(`${BACKENDURL}/api/v1/flights/all-flights`);
+//                 if (!response.ok) {
+//                     throw new Error("Failed to fetch flights");
+//                 }
+//                 const data = await response.json();
+//                 setFlights(data);
+//                 setLoading(false);
+//             } catch (error) {
+//                 console.error("Error fetching flights:", error);
+//                 setLoading(false);
+//             }
+//         };
+
+//         fetchFlights();
+//     }, []);
+
+//     const sortedFlights = [...flights].sort((a, b) => {
+//         if (sortBy === "mostViewed") return b.views - a.views;
+//         if (sortBy === "recentSearch") return new Date(b.searchDate) - new Date(a.searchDate);
+//         if (sortBy === "mostPopular") return b.popularity - a.popularity;
+//         if (sortBy === "mostRated") return b.rating - a.rating;
+//         if (sortBy === "priceLowToHigh") return a.sellingPrice - b.sellingPrice;
+//         if (sortBy === "priceHighToLow") return b.sellingPrice - a.sellingPrice;
+//         if (sortBy === "alphabetical") return a.name.localeCompare(b.name);
+//         return 0;
+//     });
+
+//     const handleLimitChange = (event) => setLimit(parseInt(event.target.value));
+//     const handleSortChange = (event) => setSortBy(event.target.value);
+
+//     const displayedFlights = sortedFlights.slice((currentPage - 1) * limit, currentPage * limit);
+
+//     const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+//     const goToNextPage = () => currentPage < Math.ceil(flights.length / limit) && setCurrentPage((prev) => prev + 1);
+//     const goToPreviousPage = () => currentPage > 1 && setCurrentPage((prev) => prev - 1);
+
+//     if (loading) return <p>Loading flights...</p>;
+
+//     return (
+//         <div className="mx-auto max-w-7xl p-4">
+//             <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+//                 <div className="text-gray-800 mb-2 md:mb-0">Total Flights Found: {flights.length}</div>
+//                 <div className="flex flex-wrap items-center gap-2">
+//                     <FaArrowUp
+//                         onClick={scrollToTop}
+//                         className="text-gray-800 cursor-pointer text-lg"
+//                         title="Back to Top"
+//                     />
+//                     <select
+//                         onChange={handleLimitChange}
+//                         value={limit}
+//                         className="bg-white border text-gray-800 py-1 px-3 rounded-md"
+//                     >
+//                         <option value={10}>10</option>
+//                         <option value={20}>20</option>
+//                         <option value={30}>30</option>
+//                     </select>
+//                     <select
+//                         onChange={handleSortChange}
+//                         value={sortBy}
+//                         className="bg-white border text-gray-800 py-1 px-3 rounded-md"
+//                     >
+//                         <option value="mostViewed">Most Viewed</option>
+//                         <option value="recentSearch">Recent Search</option>
+//                         <option value="mostPopular">Most Popular</option>
+//                         <option value="mostRated">Most Rated</option>
+//                         <option value="priceLowToHigh">Price: Low to High</option>
+//                         <option value="priceHighToLow">Price: High to Low</option>
+//                         <option value="alphabetical">Alphabetical</option>
+//                     </select>
+//                 </div>
+//             </div>
+//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+//                 {displayedFlights.length === 0 ? (
+//                     <p className="col-span-full text-center">No flights found.</p>
+//                 ) : (
+//                     displayedFlights.map((flight) => <FlightCard key={flight._id} flight={flight} />)
+//                 )}
+//             </div>
+//             <div className="flex justify-between items-center mt-6">
+//                 <button
+//                     onClick={goToPreviousPage}
+//                     disabled={currentPage === 1}
+//                     className="bg-gray-200 text-gray-800 py-1 px-4 rounded-md disabled:opacity-50"
+//                 >
+//                     Previous
+//                 </button>
+//                 <span>
+//                     Page {currentPage} of {Math.ceil(flights.length / limit)}
+//                 </span>
+//                 <button
+//                     onClick={goToNextPage}
+//                     disabled={currentPage === Math.ceil(flights.length / limit)}
+//                     className="bg-gray-200 text-gray-800 py-1 px-4 rounded-md disabled:opacity-50"
+//                 >
+//                     Next
+//                 </button>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default FlightList;

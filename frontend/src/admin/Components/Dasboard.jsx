@@ -45,7 +45,7 @@ const Dasboard = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen mt-[vw]">
+    <div className="p-6 bg-gray-100 min-h-screen ">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl font-semibold">Dashboard</h2>
@@ -61,6 +61,30 @@ const Dasboard = () => {
               className="px-4 py-2 rounded-full border border-gray-300 focus:outline-none"
             />
             <FiSearch className="absolute top-3 right-3 text-gray-400" />
+          </div>
+        </div>
+      </div>
+      {/* Activity Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div className="bg-blue-500 text-white rounded-xl p-4 shadow-md">
+          <h4 className="text-lg">Waiting list</h4>
+          <div className="flex items-center justify-between mt-2">
+            <p className="text-2xl font-bold">840</p>
+            <span className="text-sm text-green-200">+1.5</span>
+          </div>
+        </div>
+        <div className="bg-purple-500 text-white rounded-xl p-4 shadow-md">
+          <h4 className="text-lg">Completed flights</h4>
+          <div className="flex items-center justify-between mt-2">
+            <p className="text-2xl font-bold">235</p>
+            <span className="text-sm text-green-200">+0.2</span>
+          </div>
+        </div>
+        <div className="bg-black text-white rounded-xl p-4 shadow-md">
+          <h4 className="text-lg">Total revenue</h4>
+          <div className="flex items-center justify-between mt-2">
+            <p className="text-2xl font-bold">$2M</p>
+            <span className="text-sm text-red-200">-0.5</span>
           </div>
         </div>
       </div>
@@ -89,7 +113,7 @@ const Dasboard = () => {
       </div>
 
       {/* Activity Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div className="bg-blue-500 text-white rounded-xl p-4 shadow-md">
           <h4 className="text-lg">Waiting list</h4>
           <div className="flex items-center justify-between mt-2">
@@ -111,7 +135,7 @@ const Dasboard = () => {
             <span className="text-sm text-red-200">-0.5</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* All Bookings */}
       <div className="bg-white rounded-xl p-6 shadow-md">

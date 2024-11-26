@@ -10,6 +10,8 @@ import multer from "multer";
 import { createCanvas, loadImage } from "canvas";
 import { Contactrouter } from "./Routes/ContactRoute.js";
 import jsQR from "jsqr"; // Make sure to install jsQR library
+// import dashboardRoutes from "./contriller/dashboardRoutes.js"
+import dashboardRoutes from "./controller/dashboardRoutes.js"
 
 dotenv.config();
 
@@ -81,6 +83,7 @@ app.use("/api/v1/flights", flightRoute);
 app.use("/api/v1/bookings", bookingRoute);
 app.use("/api/v1/tickets", ticketRoute);
 app.use('/api/v1/contacts', Contactrouter);
+app.use("/api/dashboard", dashboardRoutes);
 
 app.listen(5000, () => {
   connectDB();

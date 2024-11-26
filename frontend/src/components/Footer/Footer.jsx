@@ -159,8 +159,9 @@ const Footer = () => {
   return (
     <footer
       className="bg-cover bg-center text-gray-900 py-8 px-4 mt-[4vw]"
-      style={{ backgroundImage: `url(${img1})` }}
+      style={{ backgroundColor:  '#2774AE'}}
     >
+      {/* { backgroundImage: `url(${img1})` } */}
       {/* Top section with logo and need help */}
       <div className="max-w-7xl mx-auto flex justify-between items-center mb-4">
         {/* Company Logo */}

@@ -43,7 +43,7 @@ const Ticket = () => {
         // Fallback: Copy URL to clipboard
         navigator.clipboard.writeText(window.location.href);
         toast.success("Link has been copied to clipboard!");
-      }
+      } 
     } catch (error) {
       toast.error("Failed to share ticket.");
     }
