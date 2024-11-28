@@ -9,6 +9,12 @@ body, html {
   padding: 0;
   overflow-x: hidden;
 }
+/* .nav{
+  color:beige;
+} */
+.nav{
+  color: rgb(230, 230, 215);
+}
 
 
 /* .flight-card {
