@@ -246,7 +246,7 @@ const SortCategory = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 mt-5">
       <div className="grid grid-cols-1 lg:grid-cols-[250px,1fr] gap-6">
         {/* Filters Section */}
         <div className="bg-gray-100 rounded-lg p-4 shadow-md max-h-screen lg:max-h-[calc(100vh-150px)] overflow-y-auto">

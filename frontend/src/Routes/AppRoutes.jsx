@@ -119,6 +119,8 @@ import Booking from "../components/userprofile/Booking";
 import CancelledTickets from "../components/userprofile/CancelledTickets";
 import CancelledallTickets from "../admin/CancelledallTickets";
 import AdminMessages from "../admin/AdminMessages";
+import WalletDashboard from "../components/userprofile/WalletDashboard";
+import PromoComponent from "../components/userprofile/PromoComponent";
 
 
 
@@ -149,6 +151,8 @@ const AppRoutes = () => {
         <Route path="/adminLogin" element={<AdminLogin />} />
         <Route path="/ticketdet" element={<TicketDetails/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/wallet" element={<WalletDashboard/>}/>
+        <Route path="/promo-codes" element={<PromoComponent/>}/>
 
         {/* Admin Routes */}
         <Route

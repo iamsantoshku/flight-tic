@@ -30,7 +30,7 @@ const TopPlaces = () => {
   };
 
   return (
-    <div className="mt-[7vw] max-w-[1400px] mx-auto relative">
+    <div className="mt-[12vw] sm:mt-[7vw] max-w-[1400px] mx-auto relative">
       <div className="mb-5">
         <h1 className="text-[35px] md:text-[50px] font-bold">
           {/* Choose your tour! */}

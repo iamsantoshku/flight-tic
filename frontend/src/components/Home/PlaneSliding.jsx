@@ -128,7 +128,7 @@ const Planesliding = () => {
   }, [index, images.length]);
 
   return (
-    <div className="relative w-full max-w-[1300px] mx-auto mt-[140vw] sm:mt-[120vw] md:mt-[50vw] lg:mt-[20vw] xl:mt-[15vw] overflow-hidden">
+    <div className="relative w-full max-w-[1300px] mx-auto mt-[140vw] sm:mt-[120vw] md:mt-[50vw] lg:mt-[20vw] xl:mt-[18vw] overflow-hidden">
       <div
         className="flex transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${(index % (images.length / 2)) * 10}%)` }}

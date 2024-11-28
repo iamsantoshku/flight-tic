@@ -448,8 +448,9 @@ const UserList = () => {
                         <div className="flex items-center space-x-2 mb-2">
                           <FaTicketAlt className="text-green-500 text-lg" />
                           <span className="text-gray-600">
-                            UID: {ticket.uid || "N/A"}
+                            UID: {ticket.uid || "N/A"} 
                           </span>
+
                         </div>
                         {ticket.bookings.map((booking, bookingIndex) => {
                           const flight = flights.find((f) => f._id === booking.flight);
@@ -467,7 +468,11 @@ const UserList = () => {
                                   Seat: {booking.seat || "N/A"}
                                 </p>
                                 <p className="text-sm text-gray-500">
-                                  Destination: {flight?.destination || "N/A"}
+                                  Destination: {flight?.
+to || "N/A"}
+                                </p>
+                                <p className="text-sm text-gray-500">
+                                  status: {ticket.status}
                                 </p>
                               </div>
                             </div>

@@ -572,7 +572,12 @@ const FlightListHome = () => {
                         Competitive fares for your route-specific searches.
                     </p>
                 </div>
-                <img src={flightlogo} alt="Flight Offer" className="max-w-[80px] sm:max-w-[200px] w-full object-cover" />
+                <img 
+  src={flightlogo} 
+  alt="Flight Offer" 
+  className="hidden sm:block max-w-[80px] sm:max-w-[200px] w-full object-cover" 
+/>
+                {/* <img src={flightlogo} alt="Flight Offer" className="max-w-[80px] sm:max-w-[200px] w-full object-cover" /> */}
             </div>
 
             <div className="flex flex-col lg:flex-row gap-4">

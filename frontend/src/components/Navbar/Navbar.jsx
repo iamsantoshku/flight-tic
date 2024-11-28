@@ -829,7 +829,7 @@ function Navbar() {
           <ul className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-8">
             <li className="relative group">
               <NavLink
-                className={`flex items-center ${isHomePage ? (isScrolled ? 'text-black' : 'text-white') : 'text-black'} hover:text-orange-500`}
+                className={`flex items-center ${isHomePage ? (isScrolled ? 'text-black' : 'text-gray-200') : 'text-black'} hover:text-orange-500`}
                 to="/"
                 onClick={closeMobileMenu}
               >
@@ -849,7 +849,7 @@ function Navbar() {
             {/* Other Nav Links */}
             <li className="relative group">
               <NavLink
-                className={`flex items-center ${isHomePage ? (isScrolled ? 'text-black' : 'text-white') : 'text-black'} hover:text-orange-500`}
+                className={`flex items-center ${isHomePage ? (isScrolled ? 'text-black' : 'text-gray-200') : 'text-black'} hover:text-orange-500`}
                 to="/search"
                 onClick={closeMobileMenu}
               >
@@ -870,7 +870,7 @@ function Navbar() {
             </li>
             <li className="relative group">
               <NavLink
-                className={`flex items-center ${isHomePage ? (isScrolled ? 'text-black' : 'text-white') : 'text-black'} hover:text-orange-500`}
+                className={`flex items-center ${isHomePage ? (isScrolled ? 'text-black' : 'text-gray-200') : 'text-black'} hover:text-orange-500`}
                 to="/blog-grid"
                 onClick={closeMobileMenu}
               >
@@ -895,7 +895,7 @@ function Navbar() {
 
             <li>
               <NavLink
-                className={`${isHomePage ? (isScrolled ? 'text-black' : 'text-white') : 'text-black'} hover:text-orange-500`}
+                className={`${isHomePage ? (isScrolled ? 'text-black' : 'text-gray-200') : 'text-black'} hover:text-orange-500`}
                 to="/contact"
                 onClick={closeMobileMenu}
               >
@@ -905,7 +905,7 @@ function Navbar() {
 
             <li>
               <NavLink
-                className={`${isHomePage ? (isScrolled ? 'text-black' : 'text-white') : 'text-black'} hover:text-orange-500`}
+                className={`${isHomePage ? (isScrolled ? 'text-black' : 'text-gray-200') : 'text-black'} hover:text-orange-500`}
                 to="/about"
                 onClick={closeMobileMenu}
               >

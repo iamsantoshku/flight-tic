@@ -71,7 +71,7 @@ const FlightList = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div className="mt-[9vw] max-w-[1400px] mx-auto relative">
+    <div className="mt-[18vw] sm:mt-[9vw] max-w-[1400px] mx-auto relative">
       <div className="mb-5">
         <div className="flex flex-col">
           <h1 className="text-[8vw] sm:text-[35px] md:text-[50px] font-bold leading-tight">
