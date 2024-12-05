@@ -266,7 +266,8 @@ const SearchedFlightCards = ({ flight }) => {
   };
 
   return (
-    <div className="relative w-full p-4 border rounded-lg flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 max-w-6xl mx-auto cursor-pointer hover:shadow-lg transition duration-150">
+    // relative w-full p-4 border rounded-lg flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 max-w-6xl   mx-auto cursor-pointer hover:shadow-lg transition duration-150
+    <div className="relative w-full p-4 border rounded-lg flex flex-col md:flex-row justify-between items-center gap-2 md:gap-8 max-w-full  sm:max-w-6xl mx-auto cursor-pointer hover:shadow-lg transition duration-150 px-14 sm:px-3">
       {/* Airline Logo and Name */}
       <div className="flex items-center gap-4 w-full md:w-1/4">
         <div className="h-[60px] w-[60px] bg-transparent flex justify-center items-center rounded-md">

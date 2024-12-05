@@ -316,7 +316,7 @@ const TicketSearchPage = () => {
         ) : null}
       </div>
       {/* -mt-[60vh] sm:-mt-60 md:-mt-40 lg:-mt-65 */}
-      <div className="-mt-[60vh] sm:-mt-[80vh] md:-mt-40 lg:-mt-[30vh]">
+      <div className="slid -mt-[60vh] sm:-mt-[80vh] md:-mt-[30vh] lg:-mt-[30vh]">
         <Planesliding />
       </div>
 

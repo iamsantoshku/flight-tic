@@ -246,7 +246,7 @@ const Header = ({ currentFlight }) => {
   };
 
   return (
-    <div className="border rounded-xl shadow-lg overflow-hidden max-w-5xl mx-auto">
+    <div className="border rounded-xl shadow-lg overflow-hidden max-w-5xl mx-auto  mt-10 sm:mt-0">
       {/* Alert Section */}
       <div className="bg-yellow-100 p-2 text-sm text-yellow-700 flex items-center">
         <span className="mr-2">✈️</span>

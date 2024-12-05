@@ -439,6 +439,154 @@
 
 
 
+// import React, { useState } from "react";
+// import backimg from "../assets/banner-booking.png";
+
+// const BookTicketBox = ({
+//   formData,
+//   handleFormDataChange,
+//   handleFlightSearch,
+// }) => {
+//   const [isReturn, setIsReturn] = useState(true); // State to track if return is selected
+
+//   const handleTripTypeChange = (type) => {
+//     setIsReturn(type === "return");
+//   };
+
+//   return (
+//     <div
+//       className="w-full h-[160vh] sm:h-[90vh] flex flex-col items-center justify-center bg-cover bg-center mx-auto mt-[4.8vw]"
+//       style={{
+//         backgroundImage: `linear-gradient(rgba(255, 255, 255), rgba(255, 255, 255,0.3)), url(${backimg})`,
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//         backgroundRepeat: "no-repeat",
+//         marginRight: "10vw",
+//       }}
+//     >
+//       {/* Header Section */}
+//       <div className="head text-center mb-5 -mt-[10vw] sm:mt-[0vw]">
+//         <h1 className="text-[8vw] sm:text-[35px] md:text-[50px] font-bold text-gray-900 mb-1">
+//           A World Of Luxury Awaits For You
+//         </h1>
+//         <h3 className="text-[4vw] sm:text-[20px] md:text-[25px] font-semibold text-gray-900">
+//           We Provide Our Best Facilities For You
+//         </h3>
+//       </div>
+
+//       <div className="bg-white bg-opacity-90 p-3 pb-10 rounded-lg shadow-lg w-[85vw]">
+//         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4 flex-wrap">
+//           {/* One Way and Return Buttons */}
+//           <div className="flex gap-2 mb-4 lg:mb-0">
+//             <button
+//               className={`px-4 py-2 rounded-lg ${
+//                 !isReturn ? "bg-orange-500" : "bg-orange-50"
+//               } hover:bg-orange-300`}
+//               onClick={() => handleTripTypeChange("oneWay")}
+//             >
+//               One Way
+//             </button>
+//             <button
+//               className={`px-4 py-2 rounded-lg ${
+//                 isReturn ? "bg-orange-500" : "bg-orange-50"
+//               } hover:bg-orange-300`}
+//               onClick={() => handleTripTypeChange("return")}
+//             >
+//               Return
+//             </button>
+//           </div>
+
+//           {/* Input fields in one row for larger screens */}
+//           <div className="flex flex-col lg:flex-row lg:gap-2 lg:items-center w-full flex-wrap">
+//             {/* From Input */}
+//             <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
+//               <label className="text-lg">From</label>
+//               <input
+//                 name="from"
+//                 type="text"
+//                 placeholder="Delhi"
+//                 value={formData.from}
+//                 className="outline-none bg-gray-50 text-[20px] w-full"
+//                 onChange={handleFormDataChange}
+//               />
+//             </div>
+
+//             {/* To Input */}
+//             <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
+//               <label className="text-lg">To</label>
+//               <input
+//                 name="to"
+//                 type="text"
+//                 placeholder="Mumbai"
+//                 value={formData.to}
+//                 className="outline-none bg-gray-50 text-[20px] w-full"
+//                 onChange={handleFormDataChange}
+//               />
+//             </div>
+
+//             {/* Departure Date */}
+//             <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
+//               <label className="text-lg">Departure Date</label>
+//               <input
+//                 name="departDate"
+//                 type="date"
+//                 value={formData.departDate}
+//                 className="outline-none bg-gray-50 text-[18px] w-full"
+//                 onChange={handleFormDataChange}
+//               />
+//             </div>
+
+//             {/* Return Date */}
+//             {isReturn && (
+//               <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
+//                 <label className="text-lg">Return Date</label>
+//                 <input
+//                   name="returnDate"
+//                   type="date"
+//                   value={formData.returnDate}
+//                   className="outline-none bg-gray-50 text-[18px] w-full"
+//                   onChange={handleFormDataChange}
+//                 />
+//               </div>
+//             )}
+
+//             {/* Flight Type */}
+//             <div className="flex flex-col p-3 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
+//               <label className="text-lg">Flight Type</label>
+//               <select
+//                 name="flightType"
+//                 className="w-full text-lg bg-gray-50 mt-3 outline-none"
+//                 value={formData.flightType}
+//                 onChange={handleFormDataChange}
+//               >
+//                 <option value="Economy">Economy</option>
+//                 <option value="Premium">Premium</option>
+//                 <option value="Business">Business</option>
+//                 <option value="First">First</option>
+//               </select>
+//             </div>
+
+//             {/* Search Button */}
+//             <div className="flex justify-center lg:justify-end mt-4 lg:mt-0 w-full lg:w-auto">
+//               <button
+//                 className="hover:bg-[#1E293B] bg-[#bebebe] text-black hover:text-white px-3 py-4 rounded-full transition duration-100 text-sm md:text-base lg:text-lg h-auto"
+//                 onClick={handleFlightSearch}
+//               >
+//                 Search Flights
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default BookTicketBox;
+
+
+
+
 import React, { useState } from "react";
 import backimg from "../assets/banner-booking.png";
 
@@ -474,107 +622,105 @@ const BookTicketBox = ({
         </h3>
       </div>
 
-      <div className="bg-white bg-opacity-90 p-3 rounded-lg shadow-lg w-[85vw]">
+      <div className="bg-white bg-opacity-90 p-5 pb-10 rounded-lg shadow-lg w-[90vw] md:w-[85vw] lg:w-[85vw]">
+        {/* Buttons for One Way and Return */}
+        <div className="flex gap-2 mb-5 justify-center">
+          <button
+            className={`px-4 py-2 rounded-lg ${
+              !isReturn ? "bg-orange-500" : "bg-orange-50"
+            } hover:bg-orange-300`}
+            onClick={() => handleTripTypeChange("oneWay")}
+          >
+            One Way
+          </button>
+          <button
+            className={`px-4 py-2 rounded-lg ${
+              isReturn ? "bg-orange-500" : "bg-orange-50"
+            } hover:bg-orange-300`}
+            onClick={() => handleTripTypeChange("return")}
+          >
+            Return
+          </button>
+        </div>
+
+        {/* Form Inputs */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4 flex-wrap">
-          {/* One Way and Return Buttons */}
-          <div className="flex gap-2 mb-4 lg:mb-0">
-            <button
-              className={`px-4 py-2 rounded-lg ${
-                !isReturn ? "bg-orange-500" : "bg-orange-50"
-              } hover:bg-orange-300`}
-              onClick={() => handleTripTypeChange("oneWay")}
-            >
-              One Way
-            </button>
-            <button
-              className={`px-4 py-2 rounded-lg ${
-                isReturn ? "bg-orange-500" : "bg-orange-50"
-              } hover:bg-orange-300`}
-              onClick={() => handleTripTypeChange("return")}
-            >
-              Return
-            </button>
+          {/* From Input */}
+          <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto lg:flex-[2]">
+            <label className="text-lg">From</label>
+            <input
+              name="from"
+              type="text"
+              placeholder="Delhi"
+              value={formData.from}
+              className="outline-none bg-gray-50 text-[20px] w-full"
+              onChange={handleFormDataChange}
+            />
           </div>
 
-          {/* Input fields in one row for larger screens */}
-          <div className="flex flex-col lg:flex-row lg:gap-2 lg:items-center w-full flex-wrap">
-            {/* From Input */}
-            <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
-              <label className="text-lg">From</label>
-              <input
-                name="from"
-                type="text"
-                placeholder="Delhi"
-                value={formData.from}
-                className="outline-none bg-gray-50 text-[20px] w-full"
-                onChange={handleFormDataChange}
-              />
-            </div>
+          {/* To Input */}
+          <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto lg:flex-[2]">
+            <label className="text-lg">To</label>
+            <input
+              name="to"
+              type="text"
+              placeholder="Mumbai"
+              value={formData.to}
+              className="outline-none bg-gray-50 text-[20px] w-full"
+              onChange={handleFormDataChange}
+            />
+          </div>
 
-            {/* To Input */}
-            <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
-              <label className="text-lg">To</label>
-              <input
-                name="to"
-                type="text"
-                placeholder="Mumbai"
-                value={formData.to}
-                className="outline-none bg-gray-50 text-[20px] w-full"
-                onChange={handleFormDataChange}
-              />
-            </div>
+          {/* Departure Date */}
+          <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto lg:flex-1">
+            <label className="text-lg">Departure Date</label>
+            <input
+              name="departDate"
+              type="date"
+              value={formData.departDate}
+              className="outline-none bg-gray-50 text-[18px] w-full"
+              onChange={handleFormDataChange}
+            />
+          </div>
 
-            {/* Departure Date */}
-            <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
-              <label className="text-lg">Departure Date</label>
+          {/* Return Date */}
+          {isReturn && (
+            <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto lg:flex-1">
+              <label className="text-lg">Return Date</label>
               <input
-                name="departDate"
+                name="returnDate"
                 type="date"
-                value={formData.departDate}
+                value={formData.returnDate}
                 className="outline-none bg-gray-50 text-[18px] w-full"
                 onChange={handleFormDataChange}
               />
             </div>
+          )}
 
-            {/* Return Date */}
-            {isReturn && (
-              <div className="flex flex-col p-4 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
-                <label className="text-lg">Return Date</label>
-                <input
-                  name="returnDate"
-                  type="date"
-                  value={formData.returnDate}
-                  className="outline-none bg-gray-50 text-[18px] w-full"
-                  onChange={handleFormDataChange}
-                />
-              </div>
-            )}
+          {/* Flight Type */}
+          <div className="flex flex-col p-3 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto lg:flex-1">
+            <label className="text-lg">Flight Type</label>
+            <select
+              name="flightType"
+              className="w-full text-lg bg-gray-50 mt-3 outline-none"
+              value={formData.flightType}
+              onChange={handleFormDataChange}
+            >
+              <option value="Economy">Economy</option>
+              <option value="Premium">Premium</option>
+              <option value="Business">Business</option>
+              <option value="First">First</option>
+            </select>
+          </div>
 
-            {/* Flight Type */}
-            <div className="flex flex-col p-3 border-[1px] border-gray-300 rounded-lg w-full lg:w-auto">
-              <label className="text-lg">Flight Type</label>
-              <select
-                name="flightType"
-                className="w-full text-lg bg-gray-50 mt-3 outline-none"
-                value={formData.flightType}
-                onChange={handleFormDataChange}
-              >
-                <option value="Economy">Economy</option>
-                <option value="Premium">Premium</option>
-                <option value="Business">Business</option>
-                <option value="First">First</option>
-              </select>
-            </div>
-
-            {/* Search Button */}
-            <div className="flex justify-center lg:justify-end mt-4 lg:mt-0 w-full lg:w-auto">
-              <button
-                className="hover:bg-[#1E293B] bg-[#bebebe] text-black hover:text-white px-3 py-4 rounded-full transition duration-100 text-sm md:text-base lg:text-lg h-auto"
-                onClick={handleFlightSearch}
-              >
-                Search Flights
-              </button>
-            </div>
+          {/* Search Button */}
+          <div className="flex justify-center lg:justify-end mt-4 lg:mt-0 w-full lg:w-auto">
+            <button
+              className="hover:bg-[#1E293B] bg-[#bebebe] text-black hover:text-white px-6 py-5 rounded-full transition duration-100 text-sm md:text-base lg:text-lg h-auto"
+              onClick={handleFlightSearch}
+            >
+              Search Flights
+            </button>
           </div>
         </div>
       </div>

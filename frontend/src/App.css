@@ -17,6 +17,14 @@ body, html {
 }
 
 
+/* @media screen and (max-width: 1023px) and (max-height: 1366px) {
+  .slid {
+    margin-top: 20vh; /* Adjust the margin-top as per your requirement */
+  /* }
+} */ 
+
+
+
 /* .flight-card {
   display: flex;
   align-items: center;
@@ -101,3 +109,10 @@ body, html {
 }
 
  */
+
+
+
+
+
+
+ 
