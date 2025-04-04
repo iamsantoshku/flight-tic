@@ -93,11 +93,7 @@ const FlightList = () => {
                     displayedFlights.map((flight) => <FlightCard key={flight._id} flight={flight} />)
                 )}
             </div>
-            {/* <div className="flex lg:gap-[25vw] sm:gap-[5vw] ml-[6vw] mt-4 px-7">
-                <button onClick={goToPreviousPage} disabled={currentPage === 1} className="bg-gray-200 py-1 px-4 rounded-md">Previous</button>
-                <span>Page {currentPage} of {Math.ceil(flights.length / limit)}</span>
-                <button onClick={goToNextPage} disabled={currentPage === Math.ceil(flights.length / limit)} className="bg-gray-200 py-1 px-4 rounded-md">Next</button>
-            </div> */}
+            
 
 
 <div className="flex justify-between px-[1vw] sm:px-[6vw] items-center mt-6">

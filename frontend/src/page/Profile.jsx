@@ -879,7 +879,7 @@ const Profile = () => {
       toast.error("Failed to update profile.");
     }
   };
-
+ś
   return (
     <div className="flex flex-col items-center p-4 bg-gray-100 min-h-screen mt-[17vw] sm:mt-[4vw]">
       <div className="w-full max-w-7xl bg-white shadow rounded-lg overflow-hidden">

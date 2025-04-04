@@ -741,7 +741,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { authContext } from "../../context/authContext";
 import { FaUser, FaAngleDown } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
-import img1 from "../../assets/logo7.png";
+import img1 from "../../assets/img2.png";
+import img2 from "../../assets/img3.png";
 
 function Navbar() {
   const isAdmin = localStorage.getItem("isAdmin") === "true";
@@ -816,7 +817,7 @@ function Navbar() {
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
           <img
-            className="bg-orange-500 rounded h-10 w-10"
+            className=""
             src={img1}
             alt="webreak"
           />

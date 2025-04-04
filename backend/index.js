@@ -7,7 +7,7 @@ import flightRoute from "./Routes/flights.js";
 import bookingRoute from "./Routes/booking.js";
 import ticketRoute from "./Routes/tickets.js";
 import multer from "multer";
-import { createCanvas, loadImage } from "canvas";
+// import { createCanvas, loadImage } from "canvas";
 import { Contactrouter } from "./Routes/ContactRoute.js";
 import jsQR from "jsqr"; // Make sure to install jsQR library
 // import dashboardRoutes from "./contriller/dashboardRoutes.js"

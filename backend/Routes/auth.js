@@ -1,7 +1,7 @@
 import express from "express";
 
 import { authenticate, restrict  } from "../auth/verifyToken.js";
-// 
+
 
 import {
   registerUser,

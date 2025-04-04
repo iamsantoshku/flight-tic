@@ -78,6 +78,7 @@ import TravelBooking from './TravelBooking';
 import AdventureSection from './AdventureSection';
 import TeamSection from './TeamSection';
 import Testimonials from '../Home/Testimonials';
+import DestinationCard from './DestinationCard';
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -125,6 +126,16 @@ const About = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <Testimonials />
+      </motion.div>
+
+      <motion.div
+        className="relative bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200 py-12 px-4 sm:px-8 lg:px-16"
+        variants={fadeInVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <DestinationCard />
       </motion.div>
     </>
   );
